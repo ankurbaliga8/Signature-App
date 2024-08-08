@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Easy Signature</title>
+    <style>
+      .canvas {
+        border: 1px solid black;
+        border-width: 2px;
+      }
+      .top,
+      .bottom {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin: 20px 0 20px 0;
+      }
+      .block,
+      input,
+      select,
+      button {
+        width: 80%;
+      }
+      .main {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centering the div */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main div Everything is under one div -->
+    <div class="main">
+      <!-- first div which contains 3 divs of each -->
+      <div class="top">
+        <div class="block">
+          <label for="colorPicker">Text Color Picker</label><br />
+          <input class="form-control" type="color" id="colorPicker" />
+        </div>
+        <div class="block">
+          <label for="canvasColor">Background</label><br />
+          <input type="color" class="form-control" id="canvasColor" />
+        </div>
+        <div class="block">
+          <label for="fontSize">Font Size</label> <br />
+          <select name="" id="fontSize">
+            <option value="5">5px</option>
+            <option value="10">10px</option>
+            <option value="20">20px</option>
+            <option value="30">30px</option>
+            <option value="40">50 px</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Middle part for canvas -->
+      <canvas class="canvas" id="myCanvas" width="800" height="500"> </canvas>
+
+      <!-- Bottom part for buttons -->
+      <div class="bottom">
+        <button type="button" class="btn btn-danger" id="clearButton">
+          Clear
+        </button>
+        <button type="button" class="btn btn-success" id="saveButton">
+          Save & Download
+        </button>
+        <button type="button" class="btn btn-warning" id="retrieveButton">
+          Retrieve saved Signature
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
